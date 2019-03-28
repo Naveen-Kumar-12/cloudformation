@@ -23,7 +23,7 @@
            "Type": "AWS::EC2::VPC",
            "Properties": {
              "CidrBlock": { "Ref": "mycidrsblock" },
-             "Tags": []
+             "Tags": [reyrtye]
            }
          }
     },
