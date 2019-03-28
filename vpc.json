@@ -14,14 +14,16 @@
 
     },
     "Resources": {
-      "myvpc": {
+      "name": {
         "Type": "AWS::EC2::VPC",
         "Properties": {
-          "CidrBlock": "10.20.0.0/16",
-          "Tags": {
-            "Key": "Name",
-            "Value":  "mycfvpc"
-          }
+          "CidrBlock": "10.40.0.0/16",
+          "Tags": [
+            {
+              "Key": "Name",
+               "Value":  "mycfvpcs"
+             }
+           ]
         }
       }
 
