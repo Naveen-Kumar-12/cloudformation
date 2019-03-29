@@ -1,1 +1,1 @@
-cloud formation tempplates are written in json
+cloud formation tempplates are written in json and yaml
