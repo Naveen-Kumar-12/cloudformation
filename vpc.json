@@ -8,7 +8,7 @@
          "mycidr": {
              "Description": "give cidr for vpc",
              "Type": "String",
-             "Default": "10.0.0.1/24"
+             "Default": "10.0.0.0/24"
          }
 
     },
@@ -22,16 +22,14 @@
          "name": {
            "Type": "AWS::EC2::VPC",
            "Properties": {
-             "CidrBlock": { "Ref": "mycidrsblock" },
-             "Tags": [
-                 "key":"Name",
-                 "Value":"mycfnvpc"
-             ]
+             "CidrBlock": { 
+               "Ref": "mycidr" 
+             },
+             "Tags": []
            }
          }
     },
     "Outputs": {
-        
 
     }
 }
