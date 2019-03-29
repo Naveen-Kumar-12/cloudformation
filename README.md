@@ -1,6 +1,9 @@
-nstall GPG keys
+Install GPG keys
+
 As a first step install GPG keys used to verify installation package:
 gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+
 Installation
 I recommend you read the installation script yourself. This will give you a chance to understand what it is doing before installing, and allow you to feel more comfortable running it if you do so.
 
