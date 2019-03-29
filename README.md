@@ -125,7 +125,7 @@ which ruby
 /home/mpapis/.rvm/rubies/ruby-2.1.1/bin/ruby
 Optionally, you can set a version of Ruby to use as the default for new shells. Note that this overrides the 'system' ruby:
 
-rvm use 2.1 --default
+rvm use 2.1 --default 
 
 
 
