@@ -1,1 +1,2 @@
 cloud formation tempplates are written in json and yaml
+cfn_nag  is the best use case
