@@ -8,7 +8,7 @@
          "mycidr": {
              "Description": "give cidr for vpc",
              "Type": "String",
-             "Default": "10.0.0.0/16"
+             "Default": "10.10.0.0/16"
          }
 
     },
