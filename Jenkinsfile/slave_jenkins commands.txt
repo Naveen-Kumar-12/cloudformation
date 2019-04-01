@@ -1,0 +1,201 @@
+    1  exit
+    2  cd
+    3  pwd
+    4  ssh-keygen
+    5  ls -la
+    6  cd ~/.ssh/
+    7  ll
+    8  rm id_rsa id_rsa.pub
+    9  ll
+   10  ls -la
+   11  vi authorized_keys
+   12  chmod 640 authorized_keys
+   13  ll
+   14  exit
+   15  pwd
+   16  ls
+   17  ls
+   18  pwd
+   19  cd /var
+   20  ls
+   21  cd
+   22  ls
+   23  exit
+   24  ls
+   25  cd
+   26  ls
+   27  ls ll
+   28  ll
+   29  exit
+   30  pwd
+   31  cd
+   32  pwd
+   33  ls
+   34  exit
+   35  cd
+   36  ls
+   37  sudo wget https://bootstrap.pypa.io/get-pip.py
+   38   sudo yum install wget -y
+   39  sudo wget https://bootstrap.pypa.io/get-pip.py
+   40  sudo python get-pip.py
+   41  sudo pip install cfn-lint
+   42   sudo yum install -y git
+   43  git clone https://github.com/aws-cloudformation/cfn-python-lint.git
+   44  ll
+   45  cd cfn-python-lint/
+   46  ls -la
+   47  python setup.py clean --all
+   48  python setup.py install
+   49    sudo python setup.py install
+   50  sudo pip install setuptools -U
+   51  cfn-lint --help
+   52  cd
+   53  ll
+   54  mkdir cfn
+   55  cd cfn
+   56  vi basic.yaml
+   57  cfn-lint /home/jenkins/cfn/basic.yaml
+   58  which cfn-lint
+   59  echo $!
+   60  ls
+   61  cd
+   62  ls
+   63  cfn-python-lint /home/jenkins/cfn/basic.yaml
+   64  cfn-lint --help
+   65  sudo pip install cfn-lint
+   66  pip install cfn-lint
+   67  sudo python get-pip.py
+   68  sudo pip install cfn-lint
+   69  pip install cfn-lint
+   70  ll
+   71  ls -la
+   72  cd cfn-python-lint/
+   73  ll
+   74  python setup.py install
+   75  pip install setuptools -U
+   76  cd ..
+   77  ll
+   78  python get-pip.py
+   79  sudo python get-pip.py
+   80  pip --version
+   81  sudo pip --version
+   82  sudo yum update -y
+   83  python -v
+   84  ll
+   85  ls
+   86  ll
+   87  cd
+   88  ll
+   89  cd cfn
+   90  ls
+   91  cfn-lint --help
+   92  ls
+   93  cd ..
+   94  sudo rm -rf *
+   95  ls
+   96  sudo wget https://bootstrap.pypa.io/get-pip.py
+   97  sudo yum install wget -y
+   98  sudo python get-pip.py
+   99  pip --version
+  100  sudo pip install cfn-lint
+  101  sudo yum install -y git
+  102  git clone https://github.com/aws-cloudformation/cfn-python-lint.git
+  103  cd cfn-python-lint/
+  104  python setup.py clean --all
+  105  python setup.py install
+  106   sudo python setup.py install
+  107  sudo pip install setuptools -U
+  108  ll
+  109  visudo
+  110  sudo vi sudo
+  111  sudo visudo
+  112  sudo python setup.py install
+  113  pip
+  114  cfn-lint --help
+  115  ls
+  116  cd scripts/
+  117  ls
+  118  cd ..
+  119  cd src/
+  120  ls
+  121  cfnlint/
+  122  sudo vi cfnlint/
+  123  cd
+  124  ls
+  125  sudo vi get-pip.py
+  126  pwd
+  127  ll
+  128  sudo chown -R jenkins:jenkins
+  129  chown -help
+  130  chown --help
+  131  sudo chown -R jenkins.jenkins .py
+  132  sudo chown -R jenkins.jenkins *.py
+  133  ll
+  134  pip
+  135  pip --version
+  136  which python
+  137  ls -la
+  138  cd .jenkins/
+  139  ls
+  140  cd
+  141  ls -l
+  142  chmod +x 700 get-pip.py
+  143  pip
+  144  ls
+  145  ll
+  146  python --version
+  147  yum install python3.4
+  148  sudo yum install python3.4
+  149  python get-pip.py
+  150  sudo python get-pip.py
+  151  exit
+  152  cd
+  153  pip --version
+  154  sudo easy_install pip
+  155  pip --version
+  156  sudo pip --version
+  157  ll /usr/local/bin |grep pip
+  158  sudo chown jenkins:jenkins /usr/local/bin/pip
+  159  ll /usr/local/bin |grep pip
+  160  pip --version
+  161  sudo pip --version
+  162  /usr/local/bin/pip
+  163  /usr/local/bin/pip --version
+  164  /usr/local/bin/pip install setuptools -U
+  165  sudo /usr/local/bin/pip install setuptools -U
+  166  sudo /usr/local/bin/pip install cfn-lint
+  167  ll /usr/local/bin |grep cfn
+  168  sudo /usr/local/bin/cfn-lint --help
+  169  ll
+  170  ls -la
+  171  cat .bash_profile
+  172  sudo vi .bash_profile
+  173  sudo vi .bash_profile
+  174  pip --version
+  175  source .bash_profile
+  176  pip --version
+  177  cfn-lint
+  178  mkdir cfn
+  179  cd cfn
+  180  vi basic.json
+  181  cd
+  182  pwd
+  183  cfn-lint /home/jenkins/cfn/basic.json
+  184  cat basic.json
+  185  cd cfn
+  186  cat basic.json
+  187  vi basic.json
+  188  vi basic.json
+  189  cd
+  190  cfn-lint /home/jenkins/cfn/basic.json
+  191  cd cfn
+  192  cat basic.json
+  193  vi basic.json
+  194  cd ..
+  195  cfn-lint /home/jenkins/cfn/basic.json
+  196  cd cfn
+  197  vi basic.json
+  198  cd
+  199  cfn-lint /home/jenkins/cfn/basic.json
+  200  exit
+  201  history
