@@ -1,0 +1,45 @@
+
+ 148  sudo wget https://bootstrap.pypa.io/get-pip.py
+  149  sudo yum install wget -y
+  150  sudo wget https://bootstrap.pypa.io/get-pip.py
+  151  python get-pip.py
+  152  sudo python get-pip.py
+  153  pip install cfn-lint
+  154  sudo pip install cfn-lint
+  155  git --version
+  156  sudo yum install -y git
+  157  git clone https://github.com/aws-cloudformation/cfn-python-lint.git
+  158  ll
+  159  cd cfn-python-lint/
+  160  ls -la
+  161  python setup.py clean --all
+  162  python setup.py install
+  163  python setup.py install
+  164  sudo python setup.py install
+  165  pip install setuptools -U
+  166  sudo pip install setuptools -U
+  167  sudo python setup.py install
+  168  cfn-lint --help
+  169  cd
+  170  ll
+  171  mkdir cfn
+  172  cd cfn
+  173  vi basic.yaml
+  174  pwd
+  175  cfn-lint /home/jenkins/cfn/basic.json
+  176  echo $!
+
+
+sudo chown -R jenkins.jenkins .py
+  177  cfn-lint /home/jenkins/cfn/basic.yaml
+  178  echo $?
+  179  vi test_bucket.json
+  180  cfn-lint /home/jenkins/cfn/test_bucket.json
+  181  echo $?
+  182  ll
+  183  cfn-lint /home/jenkins/cfn/basic.yaml
+  184  cat /home/jenkins/cfn/basic.yaml
+  185  vi /home/jenkins/cfn/basic.yaml
+  186  ll
+  187  ls 
+ 
