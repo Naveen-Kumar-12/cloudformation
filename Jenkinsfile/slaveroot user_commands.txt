@@ -1,0 +1,85 @@
+ 1  sudo yum update -y
+    2  sudo su
+    3  cd je
+    4  cd jenkins
+    5  ls
+    6  sudo su jenkins /bin/bash
+    7  sudo su jenkins -s  /bin/bash
+    8  ll
+    9  sudo su
+   10  ls
+   11  rm -f cfn-python-lint  get-pip.py  g get-pip.py.1
+   12  ls
+   13  sudo su
+   14  ls
+   15  rm *
+   16  rm -rf *
+   17  ls
+   18  sudo rm -rf *
+   19  ls
+   20  sudo su
+   21  history
+[ec2-user@ip-172-31-43-102 ~]$ sudo su
+[root@ip-172-31-43-102 ec2-user]# history
+    1  useradd -d jenkins
+    2  useradd -d /var/lib/jenkins jenkins
+    3  mkdir /var/lib/jenkins/.ssh
+    4  ls
+    5  cd/var/lib/jenkins
+    6  cd /var
+    7  ls
+    8  cd lib
+    9  ls
+   10  cd jenkins/
+   11  ls
+   12  ls -la
+   13  cd .ssh
+   14  ls
+   15  vi authorized_keys
+   16  ls
+   17  chmod 700 .ssh
+   18  cd ..
+   19  chmod 700 .ssh
+   20  cd .ssh
+   21  chmod 640 authorized_keys
+   22  ls
+   23  cd /var
+   24  ls
+   25  cd lib
+   26  ls
+   27  cd jenkins/
+   28  ls
+   29  ls -la
+   30  cd .ssh
+   31  ls
+   32  ls -ltr
+   33  cd ..
+   34  ls -ltr
+   35  ls -la
+   36  cd .ssh
+   37  ls
+   38  cat authorized_keys
+   39  su jenkins
+   40  cat /etc/passwd
+   41  exit
+   42  su jenkins -s /bin/bash
+   43  visudo
+   44  su jenkins
+   45  cd
+   46  userdel -r jenkins
+   47  cat /etc/passwd
+   48  useradd jenkins
+   49  passwd jenkins
+   50  visudo
+   51  su jenkins
+   52  exit
+   53  su jenkins
+   54  exit
+   55  su jenkins
+   56  exit
+   57  su jenkins
+   58  su jenkins
+   59  visudo
+   60  su jenkins
+   61  exit
+   62  history
