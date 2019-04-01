@@ -1,0 +1,56 @@
+Steps to install Jenkins:
+
+*Installation
+Add the Jenkins repository to the yum repos, and install Jenkins from here.
+sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
+sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+sudo yum install jenkins
+
+*Installation of a stable version
+There is also a LTS YUM repository for the LTS Release Line
+sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
+sudo yum install jenkins
+
+*Installation of Java:
+yum install java-1.8.0-openjdk-devel
+Setting JAVA_HOME Environment variable
+Goto vi ~/.bashrc
+write-export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk"
+source ~/.bashrc
+
+*Start/Stop
+sudo service jenkins start/stop/restart
+sudo chkconfig jenkins on
+
+*To get the console of jenkins :
+open the port 8080 in aws console
+For checking the port:
+watch n=1 "netstat -tulpn | grep 8080"
+or 
+netstat -tulpn
+In browser go to page ip:8080 to get the console
+
+*To get the default key for admin of jenkins
+Go to path /var/lib/jenkins/secrets/initialAdminPassword
+
+*Configuring slave and linking with master
+-Jenkins Slave Setup
+ Switch to the root user.
+ sudo su
+ Add a jenkins user with the home /var/lib/jenkins.
+ useradd -d /var/lib/jenkins jenkins
+-From the Jenkins master
+ su Jenkins –s /bin/bash
+ ssh-keygen
+ Copy the id_rsa.pub key from the Jenkins user on the master.
+ cat /var/lib/jenkins/.ssh/id_rsa.pub
+-From the target slave node’s console
+Create an authorized_keys file for the jenkins user.
+Login as username :- jenkins
+mkdir /var/lib/jenkins/.ssh
+$EDITOR /var/lib/jenkins/.ssh/authorized_keys
+Give 700 permission to .ssh
+Give 640 to authorized_keys
+Paste the key from the Jenkins Master into the file.
+
