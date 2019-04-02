@@ -47,7 +47,7 @@ Paste the public IP:8080 (on which port the jenkins is running) and login to the
  ```
  After executing the commands it generates two keys id_rsa & id_rsa.pub.
  
- ###Login to jenkins-slave Machine
+ ### Login to jenkins-slave Machine
  
 
  
