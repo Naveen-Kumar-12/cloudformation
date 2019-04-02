@@ -84,6 +84,23 @@ create directory .ssh under this directory create a file naming as authorized_ke
 cd .ssh
 [jenkins@ip-172-31-43-73 .ssh]$ vi authorized_keys
 ```
+```
+give the permissions to .ssh and authorized_keys
+```sh
+chmod 700 .ssh
+chmod 640 authorized_keys
+```
+
+```
+copy the content of  id_rsa.pub from master machine and paste it to slave autorized_keys
+```
+```
+check the connection from master ssh to private ip of slave machine
+```sh
+ssh privateip
+```
+
+
 
 
 
