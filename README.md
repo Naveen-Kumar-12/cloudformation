@@ -48,7 +48,7 @@ Paste the public IP:8080 (on which port the jenkins is running) and login to the
  After executing the commands it generates two keys id_rsa & id_rsa.pub.
  
  ### Login to jenkins-slave Machine
- ### Find the latest java jdk version and install update to its latest version. Else copy the commands from  the jenkins-Master machine steps
+ ### Find the latest java jdk version and install update to its latest version. Else copy from the previous java related commands
   ```
  Change the user to root user
  ```
