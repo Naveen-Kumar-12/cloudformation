@@ -86,6 +86,7 @@ cd .ssh
 ```
 ```
 give the permissions to .ssh and authorized_keys
+```
 ```sh
 chmod 700 .ssh
 chmod 640 authorized_keys
@@ -96,6 +97,7 @@ copy the content of  id_rsa.pub from master machine and paste it to slave autori
 ```
 ```
 check the connection from master ssh to private ip of slave machine
+```
 ```sh
 ssh privateip
 ```
