@@ -132,7 +132,7 @@ bash-4.2$ ssh privateip
  ### Install git to integrate with github repositories or bitbucket repos.
  ```
  ```sh
- sudo yum install git -y
+ $ sudo yum install git -y
  ```
  
 
