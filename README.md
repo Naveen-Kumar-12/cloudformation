@@ -76,6 +76,14 @@ change directory to jenkins user path
 ```sh
 [jenkins@ip-172-31-43-73 ~]$ cd /var/lib/jenkins
 ```
+create directory .ssh under this directory create a file naming as authorized_keys
+```
+```sh
+
+[jenkins@ip-172-31-43-73 ~]$ mkdir .ssh
+cd .ssh
+[jenkins@ip-172-31-43-73 .ssh]$ vi authorized_keys
+```
 
 
 
