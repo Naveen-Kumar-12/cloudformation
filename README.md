@@ -114,11 +114,11 @@ bash-4.2$ ssh privateip
  Usage--> Always prefer node available as much as possible
  Launch method --> Launch via ssh agent method
   
- 	 Host-->private ip of the slave
-  	Credentials--> SSH username with private key
-   Host Key Verification Strategy--> known hosts file verification strategy
-   Availability-->keep agent available as much as possible
-   Save-->Launch Agent--> agent added successfully
+ Host-->private ip of the slave
+ Credentials--> SSH username with private key
+ Host Key Verification Strategy--> known hosts file verification strategy
+ Availability-->keep agent available as much as possible
+ Save-->Launch Agent--> agent added successfully
    
  
 
