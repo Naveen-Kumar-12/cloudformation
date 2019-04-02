@@ -184,5 +184,19 @@ bash-4.2$ ssh privateip
  ```sh
  cfn-lint /home/jenkins/cfn/basic.yaml
  ```
+ ### Go to Jenkins Dashboard
+ ```
+ New Item-->Freestyle job-->Configure-->Build Actions(Execute shell command)
+ shell command
+ ```
+ ```sh
+ cfn-lint /home/jenkins/cfn/basic.yaml
+ ```
+ ```
+ Save-->Build Now-->Build Success(Console output)
+ ```
+ ```
+ If we provide any invalid template then Build Failure(Console output)
+  ```
  
 
