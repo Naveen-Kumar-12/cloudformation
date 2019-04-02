@@ -61,6 +61,7 @@ Run sudo command without password
 ```
 ```
 Add the jenkins user and specify the path
+```
 ```sh
 #useradd -d /var/lib/jenkins jenkins
 ```
@@ -69,6 +70,14 @@ change the root user to jenkins user
 #su jenkins
 
 ``` 
+```
+change directory to jenkins user path
+```
+```sh
+[jenkins@ip-172-31-43-73 ~]$ cd /var/lib/jenkins
+```
+
+
 
  
 
