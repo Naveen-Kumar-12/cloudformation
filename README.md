@@ -46,6 +46,9 @@ Paste the public IP:8080 (on which port the jenkins is running) and login to the
  bash-4.2$ ssh-keygen
  ```
  After executing the commands it generates two keys id_rsa & id_rsa.pub.
+ 
+ ###Login to jenkins-slave Machine
+ 
 
  
 
