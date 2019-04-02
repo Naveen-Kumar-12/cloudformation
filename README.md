@@ -23,3 +23,9 @@ $sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable
 $sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
 $yum install jenkins
 ```
+### start the jenkins and enable jenkins jenkins on reboot & give the credentials to login to jenkins
+```sh
+$sudo service jenkins start
+$sudo chkconfig jenkins on
+$sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
