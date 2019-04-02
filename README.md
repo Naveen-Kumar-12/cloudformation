@@ -2,10 +2,10 @@
 # CFN (cloudformation template)-Validation on Jenkins Pipeline
 ## Table of Contents
 ## Installing Jenkins on AWS.
-### Two Linux Machine is Required(Our Example is Based on AWS Jenkins master-slave CFN validation )
+### Two Linux Machines is Required(Our Example is Based on AWS Jenkins master-slave CFN validation )
 
 ```
-Launch EC2 Instance naming as jenkins-master
+Launch an EC2 Instance naming as jenkins-master
 ```
 java is prerequisite to install jenkins.
 
@@ -30,7 +30,7 @@ $sudo chkconfig jenkins on
 $sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 ```
-Paste the public IP:8080 (on which port the jenkins is running) and login to the jenkins install plugins and provide te credentials
+Paste the publicIP:8080  (on which port the jenkins is running) on web browser and login to the jenkins install plugins and provide the credentials
 ```
 ### Jenkins-master machine change the ec2-user to jenkins under /bin/bash to access to it.
 ```sh
@@ -111,7 +111,7 @@ bash-4.2$ ssh privateip
  Follow the Mandatory fields should be filled
  Name-->
  Remote root directory	-->path of your jenkins user
- Labels--> Restrict the permissions to partvular Label
+ Labels--> Restrict the permissions to particular Label eg:slave3
  Usage--> Always prefer node available as much as possible
  Launch method --> Launch via ssh agent method
   
@@ -186,7 +186,9 @@ bash-4.2$ ssh privateip
  ```
  ### Go to Jenkins Dashboard
  ```
- New Item-->Freestyle job-->Configure-->Build Actions(Execute shell command)
+ New Item-->Freestyle job-->Configure-->\
+ Restrict where this project can be run--Label Expression(	Label slave3 is serviced by 1 node. Permissions or other restrictions provided by plugins may prevent this job from running on those nodes.)
+ Build Actions(Execute shell command)
  shell command
  ```
  ```sh
