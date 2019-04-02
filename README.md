@@ -121,10 +121,14 @@ bash-4.2$ ssh privateip
  Availability-->keep agent available as much as possible
  Save-->Launch Agent--> agent added successfully
  ```
+ ### Go to jenkins-slave Machine & execute the below commands to install cfn-lint.
+ ```
+ ### Install pip(python-package-manager) is used to install third-party modules which can integrated with python
+ ```
+ ```sh
+ [jenkins@ip-172-31-43-73 ~]$  sudo python get-pip.py
+ ```
  
-
-
-
 
  
 
