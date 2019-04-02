@@ -49,7 +49,8 @@ Paste the public IP:8080 (on which port the jenkins is running) and login to the
  
  ### Login to jenkins-slave Machine
   ```
- Change the user to root 
+ Change the user to root user
+ ```
  ```sh
  $sudo su
  ```
@@ -58,6 +59,14 @@ Run sudo command without password
 #sudo visudo
 #jenkins ALL=(ALL) NOPASSWD: ALL
 ```
+```
+Add the jenkins user and specify the path
+```sh
+#useradd -d /var/lib/jenkins jenkins
+```
+change the root user to jenkins user
+```
+#su jenkins
  
 
  
