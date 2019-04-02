@@ -104,7 +104,22 @@ bash-4.2$ ssh privateip
 ```
 ### Jenkins Dashboard
 ```
- manage jenkins-->manage Nodes--> New Node
+ manage jenkins-->manage Nodes--> New Node-->create
+ 
+ Configure-->
+ Follow the Mandatory fields should be filled
+ Name-->
+ Remote root directory	-->path of your jenkins user
+ Labels--> Restrict the permissions to partvular Label
+ Usage--> Always prefer node available as much as possible
+ Launch method --> Launch via ssh agent method
+  
+ 	 Host-->private ip of the slave
+  	Credentials--> SSH username with private key
+   Host Key Verification Strategy--> known hosts file verification strategy
+   Availability-->keep agent available as much as possible
+   Save-->Launch Agent--> agent added successfully
+   
  
 
 
