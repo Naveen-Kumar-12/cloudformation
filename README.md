@@ -35,3 +35,9 @@ Paste the public IP:8080 (on which port the jenkins is running) and login to the
 ### Jenkins-master machine change the ec2-user to jenkins under /bin/bash to access to it.
 ```sh
  [ec2-user@ip-172-31-34-181 ~]$ sudo su jenkins -s /bin/bash
+ ```
+ Run the commands under /var/lib/jenkins(jenkins path)
+ bash-4.2$ cd /var/lib/jenkins
+ ```
+ 
+
