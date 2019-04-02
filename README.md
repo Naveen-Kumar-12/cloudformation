@@ -29,4 +29,7 @@ $sudo service jenkins start
 $sudo chkconfig jenkins on
 $sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
-### Paste the public IP:8080 (on which port the jenkins is running) and login to the jenkins install plugins and provide te credentials
+```
+Paste the public IP:8080 (on which port the jenkins is running) and login to the jenkins install plugins and provide te credentials
+```
+
