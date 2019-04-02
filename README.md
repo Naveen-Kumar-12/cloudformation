@@ -16,4 +16,4 @@ java is prerequisite to install jenkins.
  sudo yum install java-1.8.0-openjdk-devel.x86_64 -y
  sudo update-alternatives --config java
  java -version
-```
+```sh
