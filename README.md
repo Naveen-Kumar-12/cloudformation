@@ -32,4 +32,6 @@ $sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 Paste the public IP:8080 (on which port the jenkins is running) and login to the jenkins install plugins and provide te credentials
 ```
-
+### Jenkins-master machine change the ec2-user to jenkins under /bin/bash to access to it.
+```sh
+ [ec2-user@ip-172-31-34-181 ~]$ sudo su jenkins -s /bin/bash
