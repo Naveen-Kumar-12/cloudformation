@@ -154,6 +154,7 @@ bash-4.2$ ssh privateip
  ```
  we have to execute these commands to install whole package
  ```
+ ```sh
  $sudo pip install setuptools -U
  $sudo python setup.py install
  ```
