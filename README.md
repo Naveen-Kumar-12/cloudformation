@@ -158,6 +158,11 @@ bash-4.2$ ssh privateip
  $sudo pip install setuptools -U
  $sudo python setup.py install
  ```
-
+ ```
+ if any installed package raises command not found then add the path it to env and activate
+ ```
+ ```sh
+ vi ~/.bash_profile
+ source ~/.bash_profile
+ ```
  
-
