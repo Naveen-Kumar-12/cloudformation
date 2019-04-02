@@ -40,6 +40,6 @@ Paste the public IP:8080 (on which port the jenkins is running) and login to the
  ```
  ```sh
  bash-4.2$ cd /var/lib/jenkins
- ```
+ ``
  
 
