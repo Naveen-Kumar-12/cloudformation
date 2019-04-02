@@ -51,12 +51,12 @@ Paste the public IP:8080 (on which port the jenkins is running) and login to the
   ```
  Change the user to root 
  ```sh
- sudo su
+ $sudo su
  ```
 Run sudo command without password
 ```sh
-sudo visudo
-jenkins ALL=(ALL) NOPASSWD: ALL
+#sudo visudo
+#jenkins ALL=(ALL) NOPASSWD: ALL
 ```
  
 
