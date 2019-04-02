@@ -165,4 +165,24 @@ bash-4.2$ ssh privateip
  $vi ~/.bash_profile
  $source ~/.bash_profile
  ```
+  Under jenkins create a project directory where our project files should be kept under this directory.
+ ``` 
+ ```sh
+ $mkdir cfn
+ $cd cfn
+ ```
+ ```
+ create a file contains cloudformation template written in json or yaml.
+ ```
+ ```sh
+ $vi basic.yaml
+ $pwd
+ ```
+ ```
+ To test the cloudformation template written in json or yaml syntax follow the below command.
+ ```
+ ```sh
+ cfn-lint /home/jenkins/cfn/basic.yaml
+ ```
  
+
