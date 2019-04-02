@@ -141,7 +141,7 @@ bash-4.2$ ssh privateip
  ###clone the existing  github repo and copy files it into your server
  ```
  ```sh
- git clone https://github.com/aws-cloudformation/cfn-python-lint.git
+ $git clone https://github.com/aws-cloudformation/cfn-python-lint.git
  ```
  ```
  ###list of files  is executed when we run above command
@@ -149,7 +149,13 @@ bash-4.2$ ssh privateip
  change directory to cfn-python-lint
  ```
  ```sh
- cd cfn-python-lint/
+ $cd cfn-python-lint/
+ ```
+ ```
+ we have to execute these commands to install whole package
+ ```
+ $sudo pip install setuptools -U
+ $sudo python setup.py install
  ```
 
  
