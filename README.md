@@ -197,6 +197,6 @@ bash-4.2$ ssh privateip
  ```
  ```
  If we provide any invalid template then Build Failure(Console output)
-  ```
+ ```
  
 
