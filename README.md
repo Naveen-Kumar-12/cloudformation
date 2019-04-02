@@ -162,7 +162,7 @@ bash-4.2$ ssh privateip
  if any installed package raises command not found then add the path it to env and activate
  ```
  ```sh
- vi ~/.bash_profile
- source ~/.bash_profile
+ $vi ~/.bash_profile
+ $source ~/.bash_profile
  ```
  
