@@ -37,6 +37,8 @@ Paste the public IP:8080 (on which port the jenkins is running) and login to the
  [ec2-user@ip-172-31-34-181 ~]$ sudo su jenkins -s /bin/bash
  ```
  Run the commands under /var/lib/jenkins(jenkins path)
+ ```
+ ```sh
  bash-4.2$ cd /var/lib/jenkins
  ```
  
