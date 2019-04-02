@@ -11,7 +11,7 @@ java is prerequisite to install jenkins.
 
 ```
 ### Execute the below commands to find the latest java jdk version and install update to its latest version.
-```sh
+```
  $sudo yum list|grep java-1.8
  $sudo yum install java-1.8.0-openjdk-devel.x86_64 -y
  $sudo update-alternatives --config java
@@ -64,10 +64,11 @@ Add the jenkins user and specify the path
 ```sh
 #useradd -d /var/lib/jenkins jenkins
 ```
-change the root user to jenkins user
+change the root user to jenkins user 
 ```
 #su jenkins
- 
+
+``` 
 
  
 
