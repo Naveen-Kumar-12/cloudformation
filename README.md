@@ -138,14 +138,19 @@ bash-4.2$ ssh privateip
  ### Install cfn-lint by following these steps
  ```
  ```
- clone the existing  github repo and copy files it into your server
+ ###clone the existing  github repo and copy files it into your server
  ```
  ```sh
  git clone https://github.com/aws-cloudformation/cfn-python-lint.git
  ```
- 
- 
- 
+ ```
+ ###list of files  is executed when we run above command
+ ```
+ change directory to cfn-python-lint
+ ```
+ ```sh
+ cd cfn-python-lint/
+ ```
 
  
 
