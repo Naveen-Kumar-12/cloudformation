@@ -134,6 +134,17 @@ bash-4.2$ ssh privateip
  ```sh
  $ sudo yum install git -y
  ```
+ ```
+ ### Install cfn-lint by following these steps
+ ```
+ ```
+ clone the existing  github repo and copy files it into your server
+ ```
+ ```sh
+ git clone https://github.com/aws-cloudformation/cfn-python-lint.git
+ ```
+ 
+ 
  
 
  
