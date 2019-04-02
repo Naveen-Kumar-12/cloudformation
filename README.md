@@ -17,3 +17,9 @@ java is prerequisite to install jenkins.
  $sudo update-alternatives --config java
  $java -version
 ```
+### Install jenkins on master machine by following its [official installation guide] (https://pkg.jenkins.io/redhat-stable/)
+```sh
+$sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+$sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+$yum install jenkins
+```sh
