@@ -102,7 +102,10 @@ check the connection from master ssh to private ip of slave machine
 bash-4.2$ ssh privateip
 
 ```
-
+### Jenkins Dashboard
+```
+ manage jenkins-->manage Nodes--> New Node
+ 
 
 
 
