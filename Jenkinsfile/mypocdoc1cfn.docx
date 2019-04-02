@@ -1,0 +1,122 @@
+CFN (cloudformation template)-Validation on Jenkins Pipeline
+ Create two EC2 Instances(Linux AMI)
+1. Jenkins Master
+2. Jenkins slave
+ configure jenkins on Master  and follow these steps:
+ Java is the prerequisite to make connection with Jenkins pipeline.
+	SSH login into Jenkins Master Server and run the following commands.
+Check the java version installed in your OS and check for the latest version .
+sudo yum list|grep java-1.8
+Install the latest JDK version.
+sudo yum install java-1.8.0-openjdk-devel.x86_64 –y
+If we are having multiple java versions and update it to the latest version
+	sudo update-alternatives --config java
+Check the java version
+ java –version
+Install the jenkins in your server by following the jenkins.io documentation and choose OS 
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+sudo yum install jenkins –y
+Start the jenkins in your server.
+sudo service jenkins start
+Enable the Jenkins while your system gets reboot
+sudo chkconfig jenkins on
+While logged into jenkins the credentials must be given
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+Provide the details username &password to create a jenkins account for user.
+From the Jenkins master give permissions and log into jenkins user
+ 	Sudo su Jenkins –s /bin/bash
+The process must under the jenkins directory
+	cd  /var/lib/jenkins
+Generate keys 
+	ssh-keygen
+it generates both public and private keys. To list the keys  change directory to .ssh 
+	ls
+Login to slave server and change from ec2 user to root server
+	Sudo su
+check the java jdk version and to install the latest java jdk version follow the steps executed from the jenkins master.
+Run sudo command without password linux.
+	Sudo visudo
+make changes and provide.
+	jenkins ALL=(ALL) NOPASSWD: ALL
+add jenkins users to slave node.
+useradd -d /var/lib/jenkins jenkins.
+move to jenkins user.
+	su jenkins
+in jenkins user cd /var/lib/jenkins make directory .ssh
+	mkdir .ssh
+create a file as authorized_keys 
+	vi authorized_keys
+ paste the public key file content from jenkins master to slave authorized_keys
+-->change the permissions of .ssh
+	chmod 700 .ssh
+change the permissions to authorized_keys.
+	Chmod 640 authorized_keys
+Go to jenkins master and do ssh connection with slave privateip.
+	ssh privateip
+if ssh login is success then login to jenkins machine.
+Jenkins Dashboard
+	Manage Jenkins
+manage Node
+	Provide the configuration details.
+launch new agent
+Agent successfully launched.
+under remote directory of jenkins user follow these steps.
+Install wget to download any remote file downloads into server
+	sudo yum install wget –y
+install pip(python-package-manager) is used to install third-party modules which can      integrated with python
+  	sudo wget https://bootstrap.pypa.io/get-pip.py
+  	sudo python get-pip.py
+
+Install cfn-lint module which can validates cloudformation template using pip
+  sudo pip install cfn-lint
+-->if the above step is not executed then go with these steps.
+  sudo yum install -y git
+ git clone https://github.com/aws-cloudformation/cfn-python-lint.git
+ 	ll
+ cd cfn-python-lint/
+ ls -la
+  	 python setup.py clean --all
+sudo python setup.py install
+   	sudo pip install setuptools -U
+sudo python setup.py install
+if any installed package raises command not found then add the path it to env under .bash_profile and restart it using source ~/.bash_profile
+	cfn-lint --help
+cd
+ll
+create a project directory where our project files should be kept under this directory
+mkdir cfn
+ 	cd cfn
+vi basic.yaml
+pwd
+to test the cloudformation template written in json or yaml syntax follow the below command.
+ 	cfn-lint /home/jenkins/cfn/basic.json
+ Go to Jenkins Dashboard
+	New Item
+		job Name(Freestyle job)
+			configure
+				Build-Actions
+(Execute shell command)
+Cfn-lint --help
+cfn-lint /home/jenkins/cfn/basic.json
+	Build Now
+		Build Success(console output)
+If we provide any invalid template then  Build Failure(Console output)
+
+
+
+
+
+
+	
+
+
+
+
+
+	 
+
+
+
+
+
