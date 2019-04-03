@@ -1,4 +1,4 @@
-# cloudformation
+# Cloudformation
 # CFN (cloudformation template)-Validation on Jenkins Pipeline
 ## Table of Contents
 ## Installing Jenkins on AWS.
