@@ -181,9 +181,7 @@ Go to  Manage jenkins-->manage Nodes--> New Node-->create
  $vi cfn_test.json
  $pwd
  ```
- ```
  
-
  ### Go to Jenkins Dashboard
  ```
  New Item-->Freestyle job-->Configure-->
@@ -212,7 +210,7 @@ for i in $(ls | grep '.json\|.yaml'); do    cfn-lint $i;    if [ $? == 0 ];    t
  ```
  ```
  If we provide any invalid template then Build Failure(Console output)
- ```
+ 
  ### Storing Jenkins output to AWS S3 bucket.
  ```
  Here is a list of topics we would cover in this tutorial to achieve S3 output: –
@@ -221,8 +219,8 @@ Create a S3 bucket.
 Create an IAM User , Access Key  and assign a Managed Policy to Read/Write to the specific folder.
 Install S3 Plugin on Jenkins
 Configure the S3 profile
-```
-###Create a Bucket
+
+### Create a Bucket
 
 1. Sign in to the AWS Management Console and open the Amazon S3 console at https://console.aws.amazon.com/s3/.
 2. Click “Create Bucket”
@@ -242,7 +240,6 @@ Step 2A – To Create IAM User(s) with AWS IAM console
 4. Since our user would need to access AWS API from S3 plugin, we would need to generate access keys. To generate access key for new users at this time, select Generate an access key for each user. Remember that you will not have access to the secret access keys again after this step. if you lose them, you need to create a new Access Key for this IAM User.
 5. Choose Create and then either show Key or Download Credentials in form of CSV.
 6. Since we want to use just this IAM User for POC, we would be assigning the Managed Policy specific to the user. However, it is recommended to assign Managed policies to Groups and then map the users to the Group. Proceed to next step (Step 2B) to Create and Assign a Policy.
-```
 ```
 ### Step 2B – Create a Customer policy and Assign to user 
 ```
