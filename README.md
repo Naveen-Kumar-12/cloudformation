@@ -172,18 +172,18 @@ Go to  Manage jenkins-->manage Nodes--> New Node-->create
  $cd cfn
  ```
  ```
- create a file contains cloudformation template written in json or yaml.
+ make a directory that  contains cloudformation templates written in json or yaml.
  ```
  ```sh
- $vi basic.yaml
+ $mkdir valid_tempalte
+ $cd valid_template
+ $vi test.json
+ $vi cfn_test.json
  $pwd
  ```
  ```
- To test the cloudformation template written in json or yaml syntax follow the below command.
- ```
- ```sh
- cfn-lint /home/jenkins/cfn/basic.yaml
- ```
+ 
+
  ### Go to Jenkins Dashboard
  ```
  New Item-->Freestyle job-->Configure-->\
@@ -191,9 +191,16 @@ Go to  Manage jenkins-->manage Nodes--> New Node-->create
  Build Actions(Execute shell command)
  shell command
  ```
+ To test the cloudformation template written in json or yaml syntax follow the below command.
+  ```
  ```sh
- cfn-lint /home/jenkins/cfn/basic.yaml
- ```
+#!/bin/sh
+pwd
+#for i in $(ls | grep '.json\|.yaml'); do   cfn-lint $i; done
+mkdir -p valid_template
+for i in $(ls | grep '.json\|.yaml'); do    cfn-lint $i;    if [ $? == 0 ];    then        cp $i valid_template/$i;    fi; done
+```
+```
  ```
  Save-->Build Now-->Build Success(Console output)
  ```
@@ -275,12 +282,10 @@ Once done installation, restart Jenkins to take effect.
 Go to Manage Jenkins and select “Configure System” and look for “Amazon S3 Profiles” section. Provide a profile name, access key and secret access key for your jenkinsuploader account that we created above.
 
 
-
 ### Step 5. Configure a Post-Build Step to upload **/*. files  to S3 bucket.  
 ```
 Publish artifacts to S3 
-
-Source – **/*.json 
+Source – **/*/*
 Destination – bucketname/foldername  format (The plugin accepts bucketname followed by absolute path to the folder in which the build output has to be stored.)
 Storage Class – Standard
 Bucket Region – Depending on your bucket’s region.
