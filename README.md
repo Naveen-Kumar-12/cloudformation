@@ -186,8 +186,13 @@ Go to  Manage jenkins-->manage Nodes--> New Node-->create
 
  ### Go to Jenkins Dashboard
  ```
- New Item-->Freestyle job-->Configure-->\
- Restrict where this project can be run--Label Expression(	Label slave3 is serviced by 1 node. Permissions or other restrictions provided by plugins may prevent this job from running on those nodes.)
+ New Item-->Freestyle job-->Configure-->
+ Restrict where this project can be run--Label Expression(	Label slave3 is serviced by 1 node. Permissions or other restrictions        provided by plugins may prevent this job from running on those nodes.)
+ Source Code Management-->
+ provide the mandatory details-->
+ Repository URL->Specify the URL of this remote repository. This uses the same syntax as your git clone command.
+ Credentials ->provide your github username & password
+ Branches to build->Specify the branches if you'd like to track a specific branch in a repository. If left blank, all branches will be    examined for changes and built.
  Build Actions(Execute shell command)
  shell command
  ```
