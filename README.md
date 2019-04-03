@@ -193,12 +193,13 @@ Go to  Manage jenkins-->manage Nodes--> New Node-->create
  Repository URL->Specify the URL of this remote repository. This uses the same syntax as your git clone command.
  Credentials ->provide your github username & password
  Branches to build->Specify the branches if you'd like to track a specific branch in a repository. If left blank, all branches will be    examined for changes and built.
- Build Actions(Execute shell command)
- shell command
  ```
+ ```
+ Build Actions(Execute shell command)
  To test the cloudformation template written in json or yaml syntax follow the below command.
-  ```
- ```sh
+ shell command
+```
+```sh
 #!/bin/sh
 pwd
 #for i in $(ls | grep '.json\|.yaml'); do   cfn-lint $i; done
