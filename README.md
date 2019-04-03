@@ -232,7 +232,7 @@ Step 2A – To Create IAM User(s) with AWS IAM console
 ```
 ```
 ### Step 2B – Create a Customer policy and Assign to user 
-
+```
 Sign in to the Identity and Access Management (IAM) console at https://console.aws.amazon.com/iam/.
 In the navigation pane, choose Policies and then choose Create Policy
 Select ‘Create your Own Policy’ and select policy name as ‘templateUploaders’ and paste the below JSON as Policy Document
@@ -253,11 +253,13 @@ Select ‘Create your Own Policy’ and select policy name as ‘templateUploade
     }
    ]
 }
+```
+```
 4.  Go to “Attached Entities” Tab and “Attach” to the IAM user we created in Step 2A  above.
 
 With this step the S3 bucket and our IAM user access id and secret keys are ready to be configured on Jenkins, so lets proceed to next step.
 ```
-```
+
 
 ### Step 3 – Install S3 Plugin
 
