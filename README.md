@@ -34,7 +34,7 @@ Paste the publicIP:8080  (on which port the jenkins is running) on web browser a
 ```
 ### Jenkins-master machine change the ec2-user to jenkins under /bin/bash to access to it.
 ```sh
- [ec2-user@ip-172-31-34-181 ~]$ sudo su jenkins -s /bin/bash
+$sudo su jenkins -s /bin/bash
  ```
  Run the commands under /var/lib/jenkins(jenkins path)
  ```
@@ -75,15 +75,15 @@ change the root user to jenkins user
 change directory to jenkins user path
 ```
 ```sh
-[jenkins@ip-172-31-43-73 ~]$ cd /var/lib/jenkins
+$ cd /var/lib/jenkins
 ```
 create directory .ssh under this directory create a file naming as authorized_keys
 ```
 
 
-[jenkins@ip-172-31-43-73 ~]$ mkdir .ssh
+$ mkdir .ssh
 cd .ssh
-[jenkins@ip-172-31-43-73 .ssh]$ vi authorized_keys
+$ vi authorized_keys
 ```
 ```
 give the permissions to .ssh and authorized_keys
@@ -126,7 +126,7 @@ Go to  Manage jenkins-->manage Nodes--> New Node-->create
  ### Install pip(python-package-manager) is used to install third-party modules which can integrated with python
  ```
  ```sh
- [jenkins@ip-172-31-43-73 ~]$  sudo python get-pip.py
+ $  sudo python get-pip.py
  ```
  ```
  ### Install git to integrate with github repositories or bitbucket repos.
