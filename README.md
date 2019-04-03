@@ -278,16 +278,14 @@ Go to Manage Jenkins and select “Configure System” and look for “Amazon S3
 
 ### Step 5. Configure a Post-Build Step to upload **/*. files  to S3 bucket.  
 ```
-Head to the existing build configuration, we would take ‘trav’ configuration as we built in my previous tutorial Part 2 – Jenkins – Setting up Android build. Navigate down to “Post-Build Actions” and click on “Add Post-Build Action” and select “Publish Artifacts to S3 Bucket” step.  Provide params as below
+Publish artifacts to S3 
 
-Source – **/*.json (it does accept the GLOB format wildcard)
+Source – **/*.json 
 Destination – bucketname/foldername  format (The plugin accepts bucketname followed by absolute path to the folder in which the build output has to be archived)
 Storage Class – Standard
 Bucket Region – Depending on your bucket’s region.
 Manage artifacts – true  (This would ensure the S3 Plugin manages and keeps the build outputs as per the Jenkins archival policy)
 Server side encryption – True / False (as per your bucket’s encryption policy)
-
-Publish artifacts to S3 job.png
 
 Now, click on save and you are done !!
 
