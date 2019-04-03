@@ -200,5 +200,21 @@ bash-4.2$ ssh privateip
  ```
  If we provide any invalid template then Build Failure(Console output)
  ```
- 
+ ### Storing Jenkins output to AWS S3 bucket.
+ ```
+ Here is a list of topics we would cover in this tutorial to achieve S3 output: –
 
+Create a S3 bucket.
+Create an IAM User , Access Key  and assign a Managed Policy to Read/Write to the specific folder.
+Install S3 Plugin on Jenkins
+Configure the S3 profile
+```
+###Create a Bucket
+
+1. Sign in to the AWS Management Console and open the Amazon S3 console at https://console.aws.amazon.com/s3/.
+2. Click “Create Bucket”
+3. Select Bucket name and Region. The name that you choose must be unique across all existing bucket names in Amazon S3 and remember to use only lowercase chars as it doesn’t accept certain combinations.  .
+4. Create the bucket with or without logging as per your choice.
+5. Create a folder to store your output in a specific folder.
+Configure a Post-Build Step to upload output to S3 bucket.
+```
