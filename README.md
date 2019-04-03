@@ -38,7 +38,7 @@ Paste the publicIP:8080  (on which port the jenkins is running) on web browser a
  ```
  Run the commands under /var/lib/jenkins(jenkins path)
  ```
- ```sh
+
  bash-4.2$ cd /var/lib/jenkins
  ```
  Generate public and private keys and execute the below command.
