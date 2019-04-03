@@ -218,3 +218,76 @@ Configure the S3 profile
 5. Create a folder to store your output in a specific folder.
 Configure a Post-Build Step to upload output to S3 bucket.
 ```
+```
+
+### Step 2 – Create an IAM User and assign a Group & Policy to Read/Write to the specific folder.
+
+Step 2A – To Create IAM User(s) with AWS IAM console
+1. Sign in to the Identity and Access Management (IAM) console at https://console.aws.amazon.com/iam/.
+2. In the navigation pane, choose Users and then choose Create New Users.
+3. Type in user name = jenkinsuploader
+4. Since our user would need to access AWS API from S3 plugin, we would need to generate access keys. To generate access key for new users at this time, select Generate an access key for each user. Remember that you will not have access to the secret access keys again after this step. if you lose them, you need to create a new Access Key for this IAM User.
+5. Choose Create and then either show Key or Download Credentials in form of CSV.
+6. Since we want to use just this IAM User for POC, we would be assigning the Managed Policy specific to the user. However, it is recommended to assign Managed policies to Groups and then map the users to the Group. Proceed to next step (Step 2B) to Create and Assign a Policy.
+```
+```
+### Step 2B – Create a Customer policy and Assign to user 
+
+Sign in to the Identity and Access Management (IAM) console at https://console.aws.amazon.com/iam/.
+In the navigation pane, choose Policies and then choose Create Policy
+Select ‘Create your Own Policy’ and select policy name as ‘templateUploaders’ and paste the below JSON as Policy Document
+{
+   "Version": "2012-10-17",
+   "Statement": [
+    {
+     "Sid": "AllowUserToReadWriteObjectDataInapkarchive",
+     "Action": [
+       "s3:PutObject",
+       "s3:GetObject"
+        ],
+     "Effect": "Allow",
+     "Resource": [
+       "arn:aws:s3:::bucketname/folder",
+       "arn:aws:s3:::bucketname/folder/*"
+      ]
+    }
+   ]
+}
+4.  Go to “Attached Entities” Tab and “Attach” to the IAM user we created in Step 2A  above.
+
+With this step the S3 bucket and our IAM user access id and secret keys are ready to be configured on Jenkins, so lets proceed to next step.
+```
+```
+
+### Step 3 – Install S3 Plugin
+
+Logon to Jenkins Dashboard with administrative id  and perform below steps to download S3 plugin automatically.
+
+navigate to Jenkins dashboard -> Manage Jenkins -> Manage Plugins and select available tab. Look for “S3 plugin” and install that.
+You could also download the HPI file from S3 plugin URL and paste in Plugins directory of the Jenkins installation.
+Once done installation, restart Jenkins to take effect.
+ ```
+ ```
+### Step 4 – Configure the S3 profile
+
+Go to Manage Jenkins and select “Configure System” and look for “Amazon S3 Profiles” section. Provide a profile name, access key and secret access key for your jenkinsuploader account that we created above.
+
+
+
+### Step 5. Configure a Post-Build Step to upload **/*. files  to S3 bucket.  
+```
+Head to the existing build configuration, we would take ‘trav’ configuration as we built in my previous tutorial Part 2 – Jenkins – Setting up Android build. Navigate down to “Post-Build Actions” and click on “Add Post-Build Action” and select “Publish Artifacts to S3 Bucket” step.  Provide params as below
+
+Source – **/*.json (it does accept the GLOB format wildcard)
+Destination – bucketname/foldername  format (The plugin accepts bucketname followed by absolute path to the folder in which the build output has to be archived)
+Storage Class – Standard
+Bucket Region – Depending on your bucket’s region.
+Manage artifacts – true  (This would ensure the S3 Plugin manages and keeps the build outputs as per the Jenkins archival policy)
+Server side encryption – True / False (as per your bucket’s encryption policy)
+
+Publish artifacts to S3 job.png
+
+Now, click on save and you are done !!
+
+All your build artifacts will get uploaded to Amazon S3 bucket.
+```
