@@ -297,5 +297,5 @@ Server side encryption – True / False (as per your bucket’s encryption polic
 
 Now, click on save and you are done !!
 
-All your build artifacts will get uploaded to Amazon S3 bucket.
+All your build artifacts will get uploaded to Amazon S3 bucket..
 ```
