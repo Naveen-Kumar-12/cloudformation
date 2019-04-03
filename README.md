@@ -79,7 +79,7 @@ change directory to jenkins user path
 ```
 create directory .ssh under this directory create a file naming as authorized_keys
 ```
-```sh
+
 
 [jenkins@ip-172-31-43-73 ~]$ mkdir .ssh
 cd .ssh
@@ -148,7 +148,7 @@ Go to  Manage jenkins-->manage Nodes--> New Node-->create
  ```
  change directory to cfn-python-lint
  ```
- ```sh
+
  $cd cfn-python-lint/
  ```
  ```
@@ -167,7 +167,7 @@ Go to  Manage jenkins-->manage Nodes--> New Node-->create
  ```
   Under jenkins create a project directory where our project files should be kept under this directory.
  ``` 
- ```sh
+
  $mkdir cfn
  $cd cfn
  ```
