@@ -105,7 +105,7 @@ bash-4.2$ ssh privateip
 ```
 ### Jenkins Dashboard
 ```
- manage jenkins-->manage Nodes--> New Node-->create
+Go to  Manage jenkins-->manage Nodes--> New Node-->create
  
  Configure-->
  Follow the Mandatory fields should be filled
@@ -281,7 +281,7 @@ Go to Manage Jenkins and select “Configure System” and look for “Amazon S3
 Publish artifacts to S3 
 
 Source – **/*.json 
-Destination – bucketname/foldername  format (The plugin accepts bucketname followed by absolute path to the folder in which the build output has to be archived)
+Destination – bucketname/foldername  format (The plugin accepts bucketname followed by absolute path to the folder in which the build output has to be stored.)
 Storage Class – Standard
 Bucket Region – Depending on your bucket’s region.
 Manage artifacts – true  (This would ensure the S3 Plugin manages and keeps the build outputs as per the Jenkins archival policy)
