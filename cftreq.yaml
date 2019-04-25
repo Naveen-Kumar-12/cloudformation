@@ -1,0 +1,187 @@
+AWS CloudFormation Introduction
+1. Course Introduction
+02:57
+2. About your Instructor
+01:17
+Stephane's GitHub page
+Stephane's LinkedIn page
+3. What is CloudFormation?
+02:18
+4. Benefits of CloudFormation
+04:15
+5. Course Disclaimer and Cost
+01:43
+6. CloudFormation vs Ansible & Terraform
+01:35
+7. Code Download & Tools
+8. First AWS CloudFormation Template
+15:07
+9. Summary of how CloudFormation works
+01:56
+Quiz 1: Section 1 Quiz
+Section: 2
+10 / 10
+CloudFormation First Hands-On
+10. YAML Tutorial
+05:06
+11. JSON to YAML Practice Exercise
+12. Creating an S3 Bucket using CloudFormation
+04:38
+13. Updating an S3 Bucket using CloudFormation
+05:25
+14. Deleting an S3 Bucket using CloudFormation
+00:43
+15. CloudFormation Template Options
+03:24
+16. Using CloudFormation Designer
+04:38
+17. CloudFormation Building Blocks
+01:16
+18. Deploying CloudFormation Templates
+00:54
+Quiz 2: Section 2 Quiz
+Section: 3
+4 / 4
+CloudFormation Parameters
+19. Parameters Overview
+01:28
+20. Parameters Theory & Hands-On
+12:48
+21. How to Reference a Parameter?
+02:21
+Quiz 3: Section 3 Quiz
+Section: 4
+5 / 5
+CloudFormation Resources
+22. Resources Overview
+02:48
+All resources documentation
+EC2 Instance Resource page
+23. Resources Hands On
+04:22
+EC2 Instance Resource Page
+EC2 Security Group Resource Page
+EC2 Elastic IP Resource Page
+24. Optional Attributes for Resources
+01:29
+25. Resources FAQ
+01:38
+Quiz 4: Section 4 Quiz
+Section: 5
+5 / 5
+CloudFormation Mappings
+26. Mappings Overview
+02:32
+27. Fn::FindInMap (accessing Mapping values)
+01:41
+28. Mappings Hands On
+05:01
+29. Pseudo Parameters in CloudFormation
+01:38
+Quiz 5: Section 5 Quiz
+Section: 6
+4 / 4
+CloudFormation Outputs
+30. Outputs Overview
+01:32
+31. Outputs Hands-On
+03:34
+32. Cross Stack Reference Hands On
+03:43
+Quiz 6: Section 6 Quiz
+Section: 7
+1 / 5
+CloudFormation Conditions
+33. Conditions Overview
+01:28
+34. Conditions Hands-On
+07:16
+35. Conditions Functions
+00:55
+Conditions Functions Documentation
+36. Fn::GetAtt (get attribute function)
+01:56
+Quiz 7: Section 7 Quiz
+Section: 8
+0 / 4
+CloudFormation Metadata
+37. Metadata Overview
+01:32
+38. AWS::CloudFormation::Designer Hands On
+01:59
+39. AWS::CloudFormation::Interface Hands On
+02:45
+Quiz 8: Section 8 Quiz
+Section: 9
+0 / 14
+CFN Init and EC2 User Data
+40. EC2 User Data Overview
+04:40
+41. CloudFormation EC2 User Data
+03:32
+42. CloudFormation Init Overview
+03:43
+43. Packages
+01:51
+44. Groups and Users
+01:48
+45. Sources
+01:08
+46. Files
+03:42
+47. Fn::Sub (substitute function)
+01:11
+48. Commands
+01:46
+49. Services
+01:05
+50. CFN Init and Signal
+03:44
+51. CFN Init Hands-On
+02:21
+52. User Data vs CloudFormation::Init vs Helper Scripts
+53. Section Summary
+01:20
+Section: 10
+0 / 1
+CloudFormation Drift
+54. CloudFormation Drift
+06:07
+Section: 11
+0 / 4
+CloudFormation Nested Stacks
+55. Nested Stacks Overview
+08:51
+56. Nested Stacks Updates
+03:36
+57. Nested Stacks Deletes
+01:16
+58. Closing Comments on Nested Stacks
+02:53
+Section: 12
+2 / 10
+Advanced Concepts
+59. Knowledge Review
+06:40
+A list of AWS CloudFormation Templates
+WordPress Template
+60. Using the AWS CLI
+05:49
+61. Troposphere (Python) to generate CloudFormation templates
+04:53
+Troposphere GitHub page
+62. DeletionPolicy
+03:18
+63. Custom Resources with AWS Lambda
+01:38
+Lab: Custom Resource with AWS Lambda
+64. Best Practices for CloudFormation
+03:12
+65. Cost estimate for your templates
+01:43
+66. Next Steps
+01:18
+AWS Labs GitHub page
+67. Congratulations!
+01:17
+68. Bonus Lecture: Coupons to my other courses!
