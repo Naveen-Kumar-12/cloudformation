@@ -1,0 +1,13 @@
+{
+   "AWSTemplateFormatVersion" : "2010-09-09",
+   "Resources" : {
+      "MyFrontEndTest" : {
+         "Type": "Custom::cfttest",
+         "Version" : "1.0",
+         "Properties" : {
+            "ServiceToken": "arn:aws:lambda:us-east-2:647723542605:function:mys3"
+		
+			}
+		}
+   }
+}
